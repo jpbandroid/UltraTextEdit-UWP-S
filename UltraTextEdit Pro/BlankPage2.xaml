@@ -6,20 +6,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
     x:Class="UltraTextEdit_Pro.BlankPage2"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Welcome to UltraTextEdit Pro!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
-        <Custom:Expander HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" Header="About the app">
-            <Grid>
-                <TextBlock Text="This app was built for you to edit .rtf files and draw on an InkCanvas. This app is the successor to the original UTE (UltraTextEdit) app. This app is compatible with Windows 10 1809 and later (see full Windows OS compatibility list below)." TextWrapping="Wrap"/>
-            </Grid>
-        </Custom:Expander>
-        <Custom:Expander HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" Header="Compatibility">
-            <Grid>
-                <TextBlock Text="This app is compatible with: Windows 10 1809, Windows 10 1903, Windows 10 1909, Windows 10 2004, Windows 10 20H2, Windows 10 21H1, Windows 11" TextWrapping="Wrap"/>
-            </Grid>
-        </Custom:Expander>
+        <StackPanel Margin="0,111,0,0">
+            <controls:Expander HorizontalAlignment="Center" VerticalAlignment="Top" Header="About the app">
+                <Grid>
+                    <TextBlock Text="This app was built for you to edit .rtf files and draw on an InkCanvas. This app is the successor to the original UTE (UltraTextEdit) app. This app is compatible with Windows 10 1809 and later (see full Windows OS compatibility list below)." TextWrapping="Wrap"/>
+                </Grid>
+            </controls:Expander>
+            <controls:Expander HorizontalAlignment="Center" VerticalAlignment="Top" Header="Compatibility">
+                <Grid>
+                    <TextBlock Text="This app is compatible with: Windows 10 1809, Windows 10 1903, Windows 10 1909, Windows 10 2004, Windows 10 20H2, Windows 10 21H1, Windows 11" TextWrapping="Wrap"/>
+                </Grid>
+            </controls:Expander>
+        </StackPanel>
     </Grid>
 </Page>
