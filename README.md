@@ -1,1 +1,2 @@
-# UltraTextEdit Pro
+# UltraTextEdit UWP S
+Formerly UltraTextEdit Pro
