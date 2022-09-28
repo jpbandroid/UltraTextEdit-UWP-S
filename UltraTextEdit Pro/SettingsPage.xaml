@@ -18,6 +18,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="755,103,0,0" Text="UltraTextEdit Pro" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="755,140,0,0" Text="version 1.0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="755,159,0,0" Text="by jpb" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="750,220,0,0" Text="Built 7/8/2021 at 8:31" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="750,220,0,0" Text="Built 28/9/2022 at 19:41" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>
