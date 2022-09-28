@@ -10,16 +10,16 @@
 
     <Grid>
         <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Text="Sound" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
             <ToggleSwitch x:Name="_switch" HorizontalAlignment="Center" VerticalAlignment="Top" OffContent="Sound is off" OnContent="Sound is on" Toggled="soundToggle_Toggled"/>
             <CheckBox x:Name="check1" Content="Toggle Spatial Audio" VerticalAlignment="Top" HorizontalAlignment="Center" Checked="spatialAudioBox_Checked" Unchecked="spatialAudioBox_Unchecked"/>
-            <TextBlock HorizontalAlignment="Center" Text="Sound" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Center" Text="About" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Image HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Width="155" Stretch="Fill" Source="/Assets/StoreLogo.scale-400.png" RenderTransformOrigin="0.5,0.5">
+            <TextBlock HorizontalAlignment="Center" Text="About" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="SemiBold"/>
+            <Image HorizontalAlignment="Center" Height="136" VerticalAlignment="Top" Width="155" Stretch="Fill" Source="/Assets/StoreLogo.scale-400.png" RenderTransformOrigin="0.5,0.5">
             </Image>
-            <TextBlock HorizontalAlignment="Left" Text="UltraTextEdit UWP S" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
-            <TextBlock HorizontalAlignment="Left" Text="version 1.0.20348.1" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Text="by jpb" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Text="Built 28/9/2022 at 19:41" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Text="UltraTextEdit UWP S" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Center" Text="version 1.0.20348.1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Text="by jpb" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Text="Built 28/9/2022 at 19:57" TextWrapping="Wrap" VerticalAlignment="Top"/>
         </StackPanel>
     </Grid>
 </Page>
