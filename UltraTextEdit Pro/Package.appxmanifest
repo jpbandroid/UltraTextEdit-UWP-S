@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="560f0d7a-1e03-428b-879f-b06199d0729a"
-    Publisher="CN=Kuba"
-    Version="1.0.0.0" />
+    Name="JPB.Office.UTE.UWP.S"
+    Publisher="CN=jpb"
+    Version="1.0.20348.1" />
 
   <mp:PhoneIdentity PhoneProductId="560f0d7a-1e03-428b-879f-b06199d0729a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>UltraTextEdit Pro</DisplayName>
+    <DisplayName>UltraTextEdit UWP S</DisplayName>
     <PublisherDisplayName>jpb</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>

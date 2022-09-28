@@ -9,15 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ToggleSwitch x:Name="_switch" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" OffContent="Sound is off" OnContent="Sound is on" Toggled="soundToggle_Toggled"/>
-        <CheckBox x:Name="check1" Content="Toggle Spatial Audio" Margin="0,57,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Checked="spatialAudioBox_Checked" Unchecked="spatialAudioBox_Unchecked"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Sound" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,77,0,0" Text="About" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <Image HorizontalAlignment="Left" Height="136" Margin="595,103,0,0" VerticalAlignment="Top" Width="155" Stretch="Fill" Source="/Assets/StoreLogo.scale-400.png" RenderTransformOrigin="0.5,0.5">
-        </Image>
-        <TextBlock HorizontalAlignment="Left" Margin="755,103,0,0" Text="UltraTextEdit Pro" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Margin="755,140,0,0" Text="version 1.0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="755,159,0,0" Text="by jpb" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="750,220,0,0" Text="Built 28/9/2022 at 19:41" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel>
+            <ToggleSwitch x:Name="_switch" HorizontalAlignment="Center" VerticalAlignment="Top" OffContent="Sound is off" OnContent="Sound is on" Toggled="soundToggle_Toggled"/>
+            <CheckBox x:Name="check1" Content="Toggle Spatial Audio" VerticalAlignment="Top" HorizontalAlignment="Center" Checked="spatialAudioBox_Checked" Unchecked="spatialAudioBox_Unchecked"/>
+            <TextBlock HorizontalAlignment="Center" Text="Sound" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Center" Text="About" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            <Image HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Width="155" Stretch="Fill" Source="/Assets/StoreLogo.scale-400.png" RenderTransformOrigin="0.5,0.5">
+            </Image>
+            <TextBlock HorizontalAlignment="Left" Text="UltraTextEdit UWP S" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Text="version 1.0.20348.1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Text="by jpb" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Text="Built 28/9/2022 at 19:41" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
     </Grid>
 </Page>
