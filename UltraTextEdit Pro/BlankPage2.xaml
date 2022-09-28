@@ -1,0 +1,25 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UltraTextEdit_Pro"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    x:Class="UltraTextEdit_Pro.BlankPage2"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Welcome to UltraTextEdit Pro!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <Custom:Expander HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" Header="About the app">
+            <Grid>
+                <TextBlock Text="This app was built for you to edit .rtf files and draw on an InkCanvas. This app is the successor to the original UTE (UltraTextEdit) app. This app is compatible with Windows 10 1809 and later (see full Windows OS compatibility list below)." TextWrapping="Wrap"/>
+            </Grid>
+        </Custom:Expander>
+        <Custom:Expander HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" Header="Compatibility">
+            <Grid>
+                <TextBlock Text="This app is compatible with: Windows 10 1809, Windows 10 1903, Windows 10 1909, Windows 10 2004, Windows 10 20H2, Windows 10 21H1, Windows 11" TextWrapping="Wrap"/>
+            </Grid>
+        </Custom:Expander>
+    </Grid>
+</Page>
