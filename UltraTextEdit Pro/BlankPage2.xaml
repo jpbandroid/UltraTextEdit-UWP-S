@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Welcome to UltraTextEdit Pro!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Welcome to UltraTextEdit UWP S!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
         <StackPanel Margin="0,111,0,0">
             <controls:Expander HorizontalAlignment="Center" VerticalAlignment="Top" Header="About the app">
                 <Grid>

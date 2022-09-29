@@ -153,5 +153,11 @@ namespace UltraTextEdit_Pro
         {
             this.Frame.Navigate(typeof(MusicPage));
         }
+
+        private void colorapply(object sender, RoutedEventArgs e)
+        {
+            var color = colorpicker.SelectedColor;
+            box.Document.Selection.CharacterFormat.ForegroundColor = color;
+        }
     }
 }

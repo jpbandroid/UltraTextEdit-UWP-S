@@ -9,11 +9,14 @@ using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using NavigationView = Microsoft.UI.Xaml.Controls.NavigationView;
+using NavigationViewItem = Microsoft.UI.Xaml.Controls.NavigationViewItem;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -70,8 +73,8 @@ namespace UltraTextEdit_Pro
             SystemNavigationManager.GetForCurrentView().BackRequested += System_BackRequested;
         }
 
-        private void NavView_ItemInvoked(NavigationView sender,
-                                         NavigationViewItemInvokedEventArgs args)
+        private void NavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender,
+                                         Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked == true)
             {
@@ -87,8 +90,8 @@ namespace UltraTextEdit_Pro
         // NavView_SelectionChanged is not used in this example, but is shown for completeness.
         // You will typically handle either ItemInvoked or SelectionChanged to perform navigation,
         // but not both.
-        private void NavView_SelectionChanged(NavigationView sender,
-                                              NavigationViewSelectionChangedEventArgs args)
+        private void NavView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender,
+                                              Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected == true)
             {
@@ -126,8 +129,8 @@ namespace UltraTextEdit_Pro
             }
         }
 
-        private void NavView_BackRequested(NavigationView sender,
-                                           NavigationViewBackRequestedEventArgs args)
+        private void NavView_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender,
+                                           Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
         {
             TryGoBack();
         }
@@ -168,8 +171,8 @@ namespace UltraTextEdit_Pro
 
             // Don't go back if the nav pane is overlayed.
             if (NavView.IsPaneOpen &&
-                (NavView.DisplayMode == NavigationViewDisplayMode.Compact ||
-                 NavView.DisplayMode == NavigationViewDisplayMode.Minimal))
+                (NavView.DisplayMode == Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Compact ||
+                 NavView.DisplayMode == Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Minimal))
                 return false;
 
             ContentFrame.GoBack();
