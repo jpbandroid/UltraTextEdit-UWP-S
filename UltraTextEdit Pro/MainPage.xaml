@@ -12,7 +12,7 @@
 
     <Grid>
         <RelativePanel>
-            <Custom:TabbedCommandBar x:Name="ribbon" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <Custom:TabbedCommandBar x:Name="ribbon" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Background="Transparent" controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
                 <!-- IsBackButtonVisible="Visible" -->
                 <Custom:TabbedCommandBar.PaneHeader>
                     <Button Style="{StaticResource AccentButtonStyle}" Content="File" Click="fileClick" />
@@ -49,9 +49,9 @@
                         <AppBarElementContainer>
                             <TextBox PlaceholderText="Size"/>
                         </AppBarElementContainer>
-                        <AppBarToggleButton Icon="Bold" Label="Bold" />
-                        <AppBarToggleButton Icon="Italic" Label="Italic" />
-                        <AppBarToggleButton Icon="Underline" Label="Underline" />
+                        <AppBarToggleButton Icon="Bold" Label="Bold" Checked="boldcheck" Unchecked="bolduncheck"/>
+                        <AppBarToggleButton Icon="Italic" Label="Italic" Checked="italiccheck" Unchecked="italicuncheck"/>
+                        <AppBarToggleButton Icon="Underline" Label="Underline" Checked="underlinecheck" Unchecked="underlineuncheck"/>
                     </Custom:TabbedCommandBarItem>
                     <Custom:TabbedCommandBarItem Header="Insert">
                         <AppBarButton Icon="Pictures" Label="Pictures">
