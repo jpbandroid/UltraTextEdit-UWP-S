@@ -225,5 +225,15 @@ namespace UltraTextEdit_Pro
                 selectedText.CharacterFormat = charFormatting;
             }
         }
+
+        private void SaveAsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BlankPage1));
+        }
     }
 }
