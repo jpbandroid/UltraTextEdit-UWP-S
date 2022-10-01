@@ -60,9 +60,9 @@
                 </Custom:TabbedCommandBar.PaneFooter>
                 <Custom:TabbedCommandBar.MenuItems>
                     <Custom:TabbedCommandBarItem Header="Home">
-                        <AppBarButton Icon="Undo" Label="Undo"/>
-                        <AppBarButton Icon="Redo" Label="Redo"/>
-                        <AppBarButton Icon="Paste" Label="Paste"/>
+                        <AppBarButton Icon="Undo" Label="Undo" Click="undo"/>
+                        <AppBarButton Icon="Redo" Label="Redo" Click="redo"/>
+                        <AppBarButton Icon="Paste" Label="Paste" Click="paste"/>
                         <AppBarSeparator />
                         <AppBarElementContainer>
                             <Custom:ColorPickerButton SelectedColor="{ThemeResource SystemAccentColor}" Click="colorapply" x:Name="colorpicker"/>
@@ -71,7 +71,7 @@
                             <ComboBox MinWidth="175" x:Name="fontbox" SelectedItem="Segoe UI" SelectionChanged="FontSelectionChanged"/>
                         </AppBarElementContainer>
                         <AppBarElementContainer>
-                            <TextBox PlaceholderText="Size"/>
+                            <TextBox PlaceholderText="Size" Text="11" x:Name="fontsizebox" TextChanged="fontsizebox_TextChanged"/>
                         </AppBarElementContainer>
                         <AppBarToggleButton Icon="Bold" Label="Bold" Checked="boldcheck" Unchecked="bolduncheck"/>
                         <AppBarToggleButton Icon="Italic" Label="Italic" Checked="italiccheck" Unchecked="italicuncheck"/>

@@ -37,6 +37,7 @@ namespace UltraTextEdit_Pro
         {
             this.InitializeComponent();
             fontbox.ItemsSource = fonts;
+            box.FontSize = double.Parse(fontsizebox.Text);
         }
         private async void OpenButton_Click(object sender, RoutedEventArgs e)
         {
@@ -258,6 +259,43 @@ namespace UltraTextEdit_Pro
                 string selectedItems = fontbox.SelectedItem.ToString();
                 box.Document.Selection.CharacterFormat.Name = selectedItems;
             }
+        }
+
+        private void fontsizebox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            bool isDouble = double.TryParse(fontsizebox.Text, out double newValue);
+            if (isDouble && newValue < 100 && newValue > 8)
+            {
+                // Update the SelectedItem to the new value. 
+                box.Document.Selection.CharacterFormat.Size = (float)newValue;
+            }
+            else
+            {
+                // If the item is invalid, reject it and revert the text.
+
+                var dialog = new ContentDialog
+                {
+                    Content = "The font size must be a number between 8 and 100.",
+                    CloseButtonText = "Close",
+                    DefaultButton = ContentDialogButton.Close
+                };
+                var task = dialog.ShowAsync();
+            }
+        }
+
+        private void undo(object sender, RoutedEventArgs e)
+        {
+            box.Document.Undo();
+        }
+
+        private void redo(object sender, RoutedEventArgs e)
+        {
+            box.Document.Redo();
+        }
+
+        private void paste(object sender, RoutedEventArgs e)
+        {
+            box.Document.Selection.Paste(0);
         }
     }
 }
