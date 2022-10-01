@@ -68,14 +68,7 @@
                             <Custom:ColorPickerButton SelectedColor="{ThemeResource SystemAccentColor}" Click="colorapply" x:Name="colorpicker"/>
                         </AppBarElementContainer>
                         <AppBarElementContainer>
-                            <ComboBox SelectedIndex="0" MinWidth="175">
-                                <ComboBoxItem Content="Arial" />
-                                <ComboBoxItem Content="Calibri" />
-                                <ComboBoxItem Content="JetBrains Mono" />
-                                <ComboBoxItem Content="Roboto" />
-                                <ComboBoxItem Content="Segoe UI" />
-                                <ComboBoxItem Content="Segoe UI Semibold" />
-                            </ComboBox>
+                            <ComboBox MinWidth="175" x:Name="fontbox" SelectedItem="Segoe UI" SelectionChanged="FontSelectionChanged"/>
                         </AppBarElementContainer>
                         <AppBarElementContainer>
                             <TextBox PlaceholderText="Size"/>

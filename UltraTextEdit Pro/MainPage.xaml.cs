@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Graphics.Canvas.Text;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,9 +25,18 @@ namespace UltraTextEdit_Pro
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public List<string> fonts
+        {
+            get
+            {
+                return CanvasTextFormat.GetSystemFontFamilies().OrderBy(f => f).ToList();
+            }
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
+            fontbox.ItemsSource = fonts;
         }
         private async void OpenButton_Click(object sender, RoutedEventArgs e)
         {
@@ -234,6 +244,20 @@ namespace UltraTextEdit_Pro
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BlankPage1));
+        }
+
+        private void FontSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Windows.UI.Text.ITextSelection selectedText = box.Document.Selection;
+            if (selectedText != null)
+            {
+                // Get the instance of ComboBox
+                ComboBox fontbox = sender as ComboBox;
+
+                // Get the ComboBox selected item text
+                string selectedItems = fontbox.SelectedItem.ToString();
+                box.Document.Selection.CharacterFormat.Name = selectedItems;
+            }
         }
     }
 }
