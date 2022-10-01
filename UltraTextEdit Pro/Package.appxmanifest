@@ -9,7 +9,7 @@
   <Identity
     Name="JPB.Office.UTE.UWP.S"
     Publisher="CN=jpb"
-    Version="1.0.20348.11" />
+    Version="1.0.20348.51" />
 
   <mp:PhoneIdentity PhoneProductId="560f0d7a-1e03-428b-879f-b06199d0729a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
