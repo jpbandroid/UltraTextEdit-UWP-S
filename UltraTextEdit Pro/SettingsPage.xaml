@@ -17,9 +17,9 @@
             <Image HorizontalAlignment="Center" Height="136" VerticalAlignment="Top" Width="155" Stretch="Fill" Source="/Assets/StoreLogo.scale-400.png" RenderTransformOrigin="0.5,0.5">
             </Image>
             <TextBlock HorizontalAlignment="Center" Text="UltraTextEdit UWP S" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
-            <TextBlock HorizontalAlignment="Center" Text="version 1.0.20348.1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Text="version 1.0.20348.11" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Center" Text="by jpb" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Text="Built 30/9/2022 at 19:58" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Text="Built 1/10/2022 at 10:35" TextWrapping="Wrap" VerticalAlignment="Top"/>
         </StackPanel>
     </Grid>
 </Page>
