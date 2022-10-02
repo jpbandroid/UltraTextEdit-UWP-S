@@ -71,7 +71,7 @@
                             <ComboBox MinWidth="175" x:Name="fontbox" SelectedItem="Segoe UI" SelectionChanged="FontSelectionChanged"/>
                         </AppBarElementContainer>
                         <AppBarElementContainer>
-                            <TextBox PlaceholderText="Size" Text="11" x:Name="fontsizebox" TextChanged="fontsizebox_TextChanged"/>
+                            <ComboBox x:Name="fontsizebox" IsEditable="True" ItemsSource="{x:Bind FontSizes}" Width="100" Loaded="fontsizebox_Loaded"  TextSubmitted="fontsizebox_TextSubmitted"/>
                         </AppBarElementContainer>
                         <AppBarToggleButton Icon="Bold" Label="Bold" Checked="boldcheck" Unchecked="bolduncheck"/>
                         <AppBarToggleButton Icon="Italic" Label="Italic" Checked="italiccheck" Unchecked="italicuncheck"/>

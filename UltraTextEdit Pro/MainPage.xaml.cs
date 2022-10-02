@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
 using Windows.UI;
 using Windows.UI.Text;
 using Windows.UI.Xaml;
@@ -37,7 +38,6 @@ namespace UltraTextEdit_Pro
         {
             this.InitializeComponent();
             fontbox.ItemsSource = fonts;
-            box.FontSize = double.Parse(fontsizebox.Text);
         }
         private async void OpenButton_Click(object sender, RoutedEventArgs e)
         {
@@ -261,28 +261,6 @@ namespace UltraTextEdit_Pro
             }
         }
 
-        private void fontsizebox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            bool isDouble = double.TryParse(fontsizebox.Text, out double newValue);
-            if (isDouble && newValue < 100 && newValue > 8)
-            {
-                // Update the SelectedItem to the new value. 
-                box.Document.Selection.CharacterFormat.Size = (float)newValue;
-            }
-            else
-            {
-                // If the item is invalid, reject it and revert the text.
-
-                var dialog = new ContentDialog
-                {
-                    Content = "The font size must be a number between 8 and 100.",
-                    CloseButtonText = "Close",
-                    DefaultButton = ContentDialogButton.Close
-                };
-                var task = dialog.ShowAsync();
-            }
-        }
-
         private void undo(object sender, RoutedEventArgs e)
         {
             box.Document.Undo();
@@ -296,6 +274,68 @@ namespace UltraTextEdit_Pro
         private void paste(object sender, RoutedEventArgs e)
         {
             box.Document.Selection.Paste(0);
+        }
+
+        public List<double> FontSizes { get; } = new List<double>()
+            {
+                8,
+                9,
+                10,
+                11,
+                12,
+                14,
+                16,
+                18,
+                20,
+                24,
+                28,
+                36,
+                48,
+                72,
+                96};
+        private void fontsizebox_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            fontsizebox.SelectedIndex = 2;
+
+            if ((ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7)))
+            {
+                fontsizebox.TextSubmitted += fontsizebox_TextSubmitted;
+            }
+        }
+
+        private void fontsizebox_TextSubmitted(ComboBox sender, ComboBoxTextSubmittedEventArgs args)
+        {
+            Windows.UI.Text.ITextSelection selectedText = box.Document.Selection;
+            if (selectedText != null)
+            {
+                bool isDouble = double.TryParse(sender.Text, out double newValue);
+
+                // Set the selected item if:
+                // - The value successfully parsed to double AND
+                // - The value is in the list of sizes OR is a custom value between 8 and 100
+                if (isDouble && (FontSizes.Contains(newValue) || (newValue < 100 && newValue > 8)))
+                {
+                    // Update the SelectedItem to the new value. 
+                    sender.SelectedItem = newValue;
+                    box.Document.Selection.CharacterFormat.Size = (float)newValue;
+                }
+                else
+                {
+                    // If the item is invalid, reject it and revert the text. 
+                    sender.Text = sender.SelectedValue.ToString();
+
+                    var dialog = new ContentDialog
+                    {
+                        Content = "The font size must be a number between 8 and 100.",
+                        CloseButtonText = "Close",
+                        DefaultButton = ContentDialogButton.Close
+                    };
+                    var task = dialog.ShowAsync();
+                }
+            }
+
+            // Mark the event as handled so the framework doesn’t update the selected item automatically. 
+            args.Handled = true;
         }
     }
 }
